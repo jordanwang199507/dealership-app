@@ -1,5 +1,5 @@
 .header {
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
 
   position: relative;
   width: 100%;
@@ -8,19 +8,21 @@
   overflow: hidden;
   display: flex;
 
-  &_filter {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(24, 28, 29, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  &_left {
+    color: $color-grey-light-1;
+    margin: 0 auto;
+    width: 10%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(23, 28, 29, 0.4);
+
+    backdrop-filter: blur(45px);
+    z-index: 2;
   }
-  &_background {
-    background-image: url("../assets/homepage_background.png");
+  &_right {
+    // background-image: url("../assets/homepage_background.png");
     background-position: 25%;
-    width: 80%;
+    width: 90%;
     height: 100%;
     position: relative;
   }
@@ -29,7 +31,7 @@
     top: 18%;
     left: 0vw;
     z-index: 10;
-    background-color: rgba(38, 38, 38, 0.2);
+    background-color: rgba(23, 28, 29, 0.4);
 
     backdrop-filter: blur(45px);
     padding: 35px 45px;
@@ -39,59 +41,39 @@
   }
   &_primary-title {
     font-size: 7rem;
-    font-family: "DM Serif Display", serif;
+    font-family: $font-title;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.25px;
     line-height: 1.25;
-    color: #e22e2e;
+    color: $color-primary;
     span {
       font-size: 3.2rem;
-      color: #f0f0f0;
-      font-family: "Ubuntu", sans-serif;
+      color: $color-grey-light-1;
+      font-family: $font-primary;
       font-weight: 500;
       font-style: normal;
     }
   }
-  &_button {
+
+  &__btn {
     position: absolute;
     top: 50%;
-    margin-left: 45px;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
     height: 50px;
     width: 250px;
-    z-index: 10;
-    margin-top: 50px;
-    // background-color: rgba(0, 0, 0, 0.2);
-    border: 0px;
-    font-size: 16px;
-    padding: 12px 30px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 280px;
-    backdrop-filter: blur(25px);
-
+    z-index: 10;
+    margin-left: 45px;
+    margin-top: 50px;
+    font-size: 1.6rem;
+    padding: 12px 30px;
     display: flex;
     gap: 12px;
     justify-content: center;
     align-items: center;
-    transition: 1s;
   }
 }
-.wrapper {
-  font-family: "Spline Sans", sans-serif;
-  font-size: 16px;
-  color: white;
-  margin: 0 auto;
-  width: 20%;
-  overflow: hidden;
-  position: relative;
-}
+
 .spline {
   position: absolute;
   margin: 0;
@@ -102,4 +84,25 @@
   overflow: hidden;
   display: block;
   z-index: 1;
+}
+.social {
+  position: absolute;
+  top: 150px;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.social div {
+  width: 2px;
+  height: 500px;
+  background: linear-gradient(
+    180deg,
+    #ffea00 0%,
+    #ff8800 33.57%,
+    #cd2525 65.86%,
+    #e22e2e 100%
+  );
 }

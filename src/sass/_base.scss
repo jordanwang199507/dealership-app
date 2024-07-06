@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+// COLOR VARIABLES
+$color-primary: #e22e2e;
+$color-primary-dark: #a42020;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-dark-grey-1: #1e2325;
+$color-dark-grey-2: #181c1d;
+
+// FONT VARIABLES
+$font-title: "DM Serif Display", sans-serif;
+$font-primary: "Ubuntu", sans-serif;
+$font-secondary: Helvetica, sans-serif;
+
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
@@ -43,11 +59,13 @@ h4 {
 
   // grid-template-rows / grid-template-columns
   grid-template:
-    min-content min-content 40vw repeat(3, min-content) / [full-start] minmax(
-      2rem,
-      1fr
+    [header-start] min-content [header-end agent-start] min-content [agent-end feature-start] min-content [feature-end story-start] 40vw [story-end] repeat(
+      3,
+      min-content
     )
-    [center-start] repeat(8, [col-start] minmax(min-content, 20em) [col-end])
-    [center-end] minmax(2rem, 1fr)
+    / [full-start] minmax(1rem, 1fr) [center-start] minmax(6rem, 1fr)
+    repeat(8, [col-start] minmax(min-content, 14em) [col-end])
+    minmax(6rem, 1fr) [center-end]
+    minmax(1rem, 1fr)
     [full-end];
 }
