@@ -54,12 +54,13 @@ h4 {
   //   margin: 0 auto;
 
   display: grid;
+  position: relative;
   // grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
   // grid-template-rows / grid-template-columns
   grid-template:
-    [header-start] min-content [header-end agent-start] min-content [agent-end feature-start] min-content [feature-end story-start] 40vw [story-end] repeat(
+    [header-start] min-content [header-end welcome-start] min-content [welecome-end agent-start] min-content [agent-end specialized-start] min-content[specialized-end feature-start] min-content [feature-end story-start] 40vw [story-end] repeat(
       3,
       min-content
     )

@@ -1,0 +1,46 @@
+.welcome {
+  grid-column: full-start / full-end;
+
+  color: #fff;
+  padding: 160px 0 140px 0;
+  background-image: linear-gradient(
+      rgba(30, 35, 37, 0.5),
+      rgba(30, 35, 37, 0.5)
+    ),
+    url(../assets/welcome_background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  background-position: center;
+
+  &__container {
+    width: 90%;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__row {
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(23, 28, 29, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+
+  &__header {
+    width: 80%;
+    max-width: 70rem;
+    margin: 0 auto 3rem auto;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: $font-secondary;
+    width: 85%;
+    max-width: 80rem;
+    margin: 0 auto 5rem auto;
+  }
+}
