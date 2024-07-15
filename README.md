@@ -35,3 +35,25 @@
 - each _name.scss files are linked via main.scss
 - main.scss is being called from App.js
 - does not require additional recompile 
+---
+## 🧱 Main Structure
+```sh
+├── public
+│  └── fonts                  # contains favicon file
+├── src
+│  ├── assets                 # contains images and svgs
+│  ├── sass                   # contains all styling files
+│  └── components             # components that make up the application (JS)
+├─── package-lock.json
+├─── package.json
+└─── README.md
+```
+
+## 📘 Tech Stack
+- [React](https://react.dev/)
+- [Spline](https://spline.design/)
+- [SCSS](https://sass-lang.com/)
+
+## 🔨 Created By
+
+- Jordan Wang @jordanwang199507
