@@ -18,6 +18,10 @@
 
     backdrop-filter: blur(45px);
     z-index: 2;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 20%;
+    }
   }
   &_right {
     // background-image: url("../assets/homepage_background.png");
@@ -28,16 +32,17 @@
   }
   &_text {
     position: absolute;
-    top: 18%;
+    top: 22%;
     left: 0vw;
     z-index: 10;
     background-color: rgba(23, 28, 29, 0.4);
 
     backdrop-filter: blur(45px);
     padding: 35px 45px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
     border-left: none;
+    @media only screen and (max-width: $bp-small) {
+      padding: 35px 25px;
+    }
   }
   &_primary-title {
     font-size: 7rem;
@@ -53,6 +58,12 @@
       font-family: $font-primary;
       font-weight: 500;
       font-style: normal;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2.4rem;
+      }
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 4.2rem;
     }
   }
 
@@ -71,6 +82,13 @@
     gap: 12px;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: $bp-small) {
+      margin-top: 0;
+      top: 50%;
+      margin-left: 25px;
+      width: 175px;
+      font-size: 1.2rem;
+    }
   }
 }
 

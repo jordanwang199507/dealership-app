@@ -123,6 +123,38 @@ function App() {
     <div className="app">
       <div className="container">
         <section className="header">
+          <nav className="nav">
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                Home
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                Find your dream vehicle
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                Our Team
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                Services
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                Book an appointment
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#" className="nav__link">
+                Customize
+              </a>
+            </li>
+          </nav>
           <div className="header_left">
             <div className="social">
               <div></div>
@@ -161,6 +193,12 @@ function App() {
               <a className="btn">Learn More</a>
             </div>
           </div>
+        </section>
+        <section className="services">
+          <Spline
+            className=""
+            scene="https://prod.spline.design/rOQRQtKF9ItKG7Hw/scene.splinecode"
+          />
         </section>
         <section className="agents">
           <h2 className="heading-4 agents__heading">Our Team</h2>
@@ -367,6 +405,32 @@ function App() {
             <img src={gal12} alt="Gallery image 12" className="gallery__img" />
           </figure>
         </section>
+        <footer className="footer">
+          <nav className="footer--nav">
+            <li className="footer--nav__item">
+              <a className="footer--nav__link">Find your dream vehicle</a>
+            </li>
+            <li className="footer--nav__item">
+              <a className="footer--nav__link">Request an appointment</a>
+            </li>
+            <li className="footer--nav__item">
+              <a className="footer--nav__link">Speak to an Agent</a>
+            </li>
+            <li className="footer--nav__item">
+              <a className="footer--nav__link">Customize your vehicle</a>
+            </li>
+            <li className="footer--nav__item">
+              <a className="footer--nav__link">Book for maintenance servce</a>
+            </li>
+            <li className="footer--nav__item">
+              <a className="footer--nav__link">Work with us</a>
+            </li>
+          </nav>
+          <p className="copyright">
+            &copy; Copyright 2017 by Jordan Wang. Lightly designed in Figma and
+            build on React. Practicing Grid Layout, SCSS, and Spline feature.
+          </p>
+        </footer>
       </div>
     </div>
   );

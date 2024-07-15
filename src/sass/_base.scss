@@ -60,7 +60,11 @@ h4 {
 
   // grid-template-rows / grid-template-columns
   grid-template:
-    [header-start] min-content [header-end welcome-start] min-content [welecome-end agent-start] min-content [agent-end specialized-start] min-content[specialized-end feature-start] min-content [feature-end story-start] 40vw [story-end] repeat(
+    [header-start] min-content [header-end welcome-start] min-content [welecome-end services-start] minmax(
+      50rem,
+      40vw
+    )
+    [services-end agent-start] min-content [agent-end specialized-start] min-content[specialized-end feature-start] min-content [feature-end story-start] 40vw [story-end] repeat(
       3,
       min-content
     )
@@ -69,4 +73,36 @@ h4 {
     minmax(6rem, 1fr) [center-end]
     minmax(1rem, 1fr)
     [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows:
+      [header-start] min-content [header-end welcome-start] min-content [welecome-end services-start] minmax(
+        50rem,
+        40vw
+      )
+      [services-end agent-start] min-content [agent-end specialized-start] min-content[specialized-end feature-start] min-content [feature-end story-start] repeat(
+        2,
+        min-content
+      )
+      [story-end] repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(2rem, 1fr) [full-end];
+  }
 }
+// [header-start] min-content [header-end welcome-start] min-content [welecome-end services-start] minmax(
+//     50rem,
+//     40vw
+//   )
+//   [services-end agent-start] min-content [agent-end specialized-start] min-content[specialized-end feature-start] min-content [feature-end story-start] repeat(2, min-content) [story-end] repeat(
+//     3,
+//     min-content
+//   )
+//   / [full-start] minmax(1rem, 1fr) [center-start] minmax(6rem, 1fr)
+//   repeat(8, [col-start] minmax(min-content, 14em) [col-end])
+//   minmax(6rem, 1fr) [center-end]
+//   minmax(1rem, 1fr)
+//   [full-end];
